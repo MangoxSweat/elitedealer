@@ -23,7 +23,7 @@ jobs:
         run: npm run build # Ensure this matches your build script
 
       - name: Install Railway CLI
-        run: npm install -g railway # Install Railway CLI globally
+        run: npm install -g @railway/cli # Install Railway CLI globally
 
       - name: Deploy to Railway
         env:
