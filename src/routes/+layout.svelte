@@ -2,6 +2,8 @@
 	import App from '$lib/components/App.svelte';
 	import { onMount, onDestroy } from 'svelte';
 	import { gsapStore, scrollTriggerStore, lenisStore } from '$lib/stores/libStore.js';
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	let lenis;
 	let gsap;
@@ -65,23 +67,6 @@
 			ScrollTrigger.addEventListener('refresh', () => lenis.raf());
 			ScrollTrigger.refresh();
 
-			ScrollTrigger.create({
-				start: 'top top',
-				end: 'bottom bottom',
-				onUpdate: (self) => {
-					const header = document.querySelector('header');
-					const scrollThreshold = document.documentElement.scrollHeight * 0.05;
-
-					if (self.direction === 1 && self.scroll() > scrollThreshold) {
-						// Scrolling down
-						header.classList.add('header-hidden');
-					} else if (self.direction === -1 || self.scroll() <= scrollThreshold) {
-						// Scrolling up
-						header.classList.remove('header-hidden');
-					}
-				}
-			});
-
 			// Start the animation frame loop
 			requestAnimationFrame((time) => lenis.raf(time));
 		}
@@ -95,14 +80,18 @@
 	});
 </script>
 
+<Header />
 <main>
+	<!--
 	<div id="three-canvas-container">
 		<App />
 	</div>
+    -->
 	<div id="scroller">
 		<slot />
 	</div>
 </main>
+<Footer />
 
 <style>
 	#three-canvas-container {
@@ -120,12 +109,12 @@
 
 	#scroller {
 		/*border: green 3px solid;*/
-		min-height: 1000vh; /* Creates 2x the viewport height scrollable area */
 	}
 	/* You can include any global styles here if needed */
 
 	:global(body) {
 		margin: 0;
 		overflow: hidden; /* Prevent default scrolling */
+		background-color: black;
 	}
 </style>
