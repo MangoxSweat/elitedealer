@@ -28,4 +28,4 @@ jobs:
       - name: Deploy to Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }} # Ensure this is set in GitHub Secrets
-        run: railway up --detach # Use the token directly from the environment variable
+        run: railway up # Use the token directly from the environment variable
