@@ -29,7 +29,11 @@ jobs:
       - name: Login to Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: railway login $RAILWAY_TOKEN
+        run: railway login --detach $RAILWAY_TOKEN
 
-      - name: Deploy to Railway
-        run: railway up --detach
+        name: Deploy to Railway
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}  # Ensure this is set in GitHub Secrets
+          RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}  # Optional: Set if you have a specific project
+        run: railway up --detach --token $RAILWAY_TOKEN  # Use the token directly
+
