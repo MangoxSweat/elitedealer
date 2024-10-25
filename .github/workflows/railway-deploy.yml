@@ -28,6 +28,6 @@ jobs:
 
       - name: Deploy to Railway
         env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }} # Ensure this is set in GitHub Secrets
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_API_TOKEN }} # Ensure this is set in GitHub Secrets
           RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }} # Optional: Set if you have a specific project
         run: railway up --token $RAILWAY_TOKEN # Use the token directly
