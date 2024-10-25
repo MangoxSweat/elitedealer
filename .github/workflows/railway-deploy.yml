@@ -1,4 +1,5 @@
 name: Deploy to Railway
+
 on:
   push:
     branches:
@@ -20,12 +21,13 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build # Ensure this matches your build script
+        run: npm run build
 
       - name: Install Railway CLI
-        run: npm install -g @railway/cli # Install Railway CLI globally
+        run: npm install -g @railway/cli
 
       - name: Deploy to Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }} # Ensure this is set in GitHub Secrets
-        run: railway up # Use the token directly from the environment variable
+          RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }} # Optional: Set if you have a specific project
+        run: railway up --token $RAILWAY_TOKEN # Use the token directly
