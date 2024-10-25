@@ -1,11 +1,11 @@
 {
-	"name": "threlte-boiler-plate",
+	"name": "Elite Dealer",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev --host",
-        "build":"svelte-kit build",
-		"start": "node build",
+		"build": "svelte-kit build",
+		"start": "node build/index.js", // Updated to point to the correct entry file
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
