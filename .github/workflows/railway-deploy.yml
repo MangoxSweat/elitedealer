@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: start
+        run: build
 
       - name: Install Railway CLI
         run: npm install -g railway # Install Railway CLI globally
