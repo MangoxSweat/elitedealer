@@ -82,7 +82,7 @@
 <section>
 	<div class="video-container">
 		<video class="video-js vjs-default-skin" bind:this={videoElement}>
-			<source src={video} type="video/mp4" />
+			<source src={video} type="video/mp4" crossorigin="anonymous" />
 			Your browser does not support the video tag.
 		</video>
 	</div>

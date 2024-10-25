@@ -1,6 +1,6 @@
 {
-	"name": "threlte-boiler-plate",
-	"version": "0.0.1",
+	"name": "EliteDealerUS",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev --host",
