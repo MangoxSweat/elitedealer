@@ -1,8 +1,9 @@
 name: Deploy to Railway
+
 on:
   push:
     branches:
-      - master # Changed from main to master
+      - master  # Changed from main to master
 
 jobs:
   deploy:
@@ -14,28 +15,21 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'  # Use the version compatible with your project
 
       - name: Install dependencies
         run: npm install
-
-      - name: Install Railway CLI
-        run: |
-          npm install -g railway
 
       - name: Build project
         run: npm run build
 
       - name: Install Railway CLI
-        run: |
-          curl -fsSL https://railway.app/install.sh | sh
+        run: npm install -g railway  # Install Railway CLI globally
 
       - name: Login to Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: |
-          railway login --token $RAILWAY_TOKEN
+        run: railway login --token $RAILWAY_TOKEN
 
       - name: Deploy to Railway
-        run: |
-          railway up --detach
+        run: railway up --detach
