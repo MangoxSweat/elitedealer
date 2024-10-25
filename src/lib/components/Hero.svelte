@@ -21,7 +21,7 @@
 				start: 'top top',
 				end: 'bottom bottom', // Adjust this value as needed
 				pin: false,
-				markers: true, // Optional: for debugging purposes
+				markers: false, // Optional: for debugging purposes
 				onEnter: () => {
 					console.log(`video Entered `);
 					if (player) {
