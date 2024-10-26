@@ -8,13 +8,13 @@
 <PageHeader title={'About'} background={banner} />
 <About>
 	<h1>Got a problem <span>?</span></h1>
-	<h1>We have the <span>solution</span></h1>
+	<h1>We have the <span>solution!</span></h1>
 	<p>
 		At Elite Dealer Solutions, we are dedicated to elevating the automotive dealership experience
 		through expert lot management, valet, and detailing services. Our team ensures that your
 		vehicles and your dealership are always ready to impress.
 	</p>
-	<button>Call now!</button>
+	<button on:click={() => (window.location.href = 'tel:+1234567890')}>Call now!</button>
 </About>
 <section id="clients">
 	<h2>
@@ -48,6 +48,8 @@
 		width: 150px;
 		height: 50px;
 		border-radius: 15px;
+		cursor: pointer;
+		font-size: 12pt;
 	}
 	span {
 		color: #e4ae37;

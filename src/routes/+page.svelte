@@ -31,13 +31,13 @@
 
 <PageHeader title="About" background={aboutBanner} />
 <About>
-	<h1 style="font-size:28pt;">Your Partner in Automotive Excellence</h1>
+	<h1 style="font-size:28pt;">Your <span>partner</span> in Automotive <span>Excellence.</span></h1>
 	<p>
 		At Elite Dealer Solutions, we are dedicated to elevating the automotive dealership experience
 		through expert lot management, valet, and detailing services. Our team ensures that your
 		vehicles and your dealership are always ready to impress.
 	</p>
-	<button>More details</button>
+	<button on:click={() => (window.location.href = '/about')}>More details</button>
 </About>
 <PageHeader title="Services" background={serviceBanner} />
 <Services services={items} />
@@ -54,6 +54,7 @@
 		width: 150px;
 		height: 50px;
 		border-radius: 15px;
+		cursor: pointer;
 	}
 
 	section {
