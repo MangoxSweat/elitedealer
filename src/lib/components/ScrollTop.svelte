@@ -9,7 +9,7 @@
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}}
 >
-	<Fa icon={faAnglesUp} size="2x" />
+	<Fa icon={faAnglesUp} size="1x" />
 </div>
 
 <style>

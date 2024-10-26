@@ -40,7 +40,7 @@
 
 <style>
 	section {
-		padding: 0 3em;
+		padding: 3em;
 	}
 	/* Add styles as needed */
 </style>

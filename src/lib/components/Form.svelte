@@ -4,10 +4,15 @@
 	let email = '';
 	let phone = '';
 	let message = '';
+	let showModal = false;
 
 	function handleSubmit(event) {
 		event.preventDefault();
 		console.log({ firstName, lastName, email, phone, message });
+		showModal = true;
+		setTimeout(() => {
+			showModal = false;
+		}, 3000);
 	}
 </script>
 
@@ -44,6 +49,11 @@
 	</div>
 	<button type="submit">Submit</button>
 </form>
+{#if showModal}
+	<div class="modal">
+		<p>Thank you! We have received your message.</p>
+	</div>
+{/if}
 
 <style>
 	h1 {
@@ -100,7 +110,6 @@
 	button:hover {
 		background-color: #0056b3;
 	}
-
 	@media (max-width: 600px) {
 		.inline-fields {
 			flex-direction: column;
@@ -113,5 +122,17 @@
 			text-align: center;
 			margin: 1em auto;
 		}
+	}
+	.modal {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: white;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		color: black;
 	}
 </style>

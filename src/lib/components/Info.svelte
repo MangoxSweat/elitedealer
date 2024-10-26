@@ -1,13 +1,9 @@
 <script>
 	import Fa from 'svelte-fa';
 	import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons/index.js';
-	import {
-		faInstagram,
-		faFacebook,
-		faXTwitter,
-		faLinkedin
-	} from '@fortawesome/free-brands-svg-icons';
+
 	import banner from '$lib/assets/images/info-banner.jpeg';
+	import SocialMediaIcons from './SocialMediaIcons.svelte';
 
 	let infos = {
 		phone: '(908)-966-3105',
@@ -16,6 +12,7 @@
 		Support: 'jorge.morales@elitedealerus.com',
 		Billing: 'billing@elitedealerus.com'
 	};
+	let instagram;
 </script>
 
 <div>
@@ -37,12 +34,7 @@
 					<p>{value}</p>
 				{/if}
 			{/each}
-			<div class="icon-container">
-				<Fa icon={faInstagram} size="2x" />
-				<Fa icon={faFacebook} size="2x" />
-				<Fa icon={faXTwitter} size="2x" />
-				<Fa icon={faLinkedin} size="2x" />
-			</div>
+			<SocialMediaIcons {instagram} />
 		{/if}
 	</div>
 </div>

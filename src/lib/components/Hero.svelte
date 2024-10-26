@@ -99,7 +99,6 @@
 <style>
 	/* Container for the video */
 	.video-container {
-		margin-bottom: 100px;
 		width: 100%;
 		height: 100%;
 		overflow: hidden;

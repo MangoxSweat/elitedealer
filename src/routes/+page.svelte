@@ -22,7 +22,9 @@
 <Hero />
 <section>
 	<div style="margin:auto; color:white; text-align:center;">
-		<h2>Providing a Full Suite of Scalable Auto Dealer Logistics Solutions</h2>
+		<h2>
+			Providing a full suite of <span>scalable</span> Auto Dealer Logistics <span>Solutions</span>
+		</h2>
 		<p>The Elite team will feel like an extension of your own team!</p>
 	</div>
 </section>
@@ -55,12 +57,12 @@
 	}
 
 	section {
+		padding: 3em;
 		background-color: black;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		min-height: 230px;
 	}
 
 	h1,
@@ -78,5 +80,8 @@
 		section {
 			padding: 0 3em;
 		}
+	}
+	span {
+		color: #e4ae37;
 	}
 </style>
