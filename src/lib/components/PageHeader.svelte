@@ -13,6 +13,7 @@
 		min-height: 300px;
 		background-size: cover;
 		background-repeat: no-repeat;
+		background-position: center;
 		display: flex;
 		justify-content: center;
 		align-items: center;

@@ -1,5 +1,6 @@
 <script>
 	import Hero from '$lib/components/Hero.svelte';
+	import { onMount } from 'svelte';
 	import About from '$lib/components/About.svelte';
 	import Services from '$lib/components/Services.svelte';
 	import { services } from '$lib/stores/services';
@@ -7,7 +8,16 @@
 	import serviceBanner from '$lib/assets/images/service-banner.png';
 	import aboutBanner from '$lib/assets/images/about-banner.jpeg';
 
+	import Fa from 'svelte-fa';
+	import { faAnglesUp } from '@fortawesome/free-solid-svg-icons/index.js';
 	let items = services.slice(0, 5);
+	let showScrollToTop = false;
+
+	onMount(() => {
+		window.addEventListener('scroll', () => {
+			showScrollToTop = window.scrollY > 500;
+		});
+	});
 </script>
 
 <Hero />
@@ -30,6 +40,18 @@
 </About>
 <PageHeader title="Services" background={serviceBanner} />
 <Services services={items} />
+
+{#if showScrollToTop}
+	<div
+		class="scroll-to-top"
+		on:click={() => {
+			console.log('to top');
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		}}
+	>
+		<Fa icon={faAnglesUp} size="2x" />
+	</div>
+{/if}
 
 <style>
 	button {
@@ -65,5 +87,15 @@
 		section {
 			padding: 0 3em;
 		}
+	}
+	.scroll-to-top {
+		color: white;
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		cursor: pointer;
+		background-color: #e4ae37;
+		border-radius: 50%;
+		padding: 10px;
 	}
 </style>
