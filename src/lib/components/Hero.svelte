@@ -1,10 +1,11 @@
 <script>
 	import videojs from 'video.js';
 	import 'video.js/dist/video-js.css';
-	import video from '$lib/assets/videos/hero-video.mp4';
 	import { gsapStore, scrollTriggerStore } from '$lib/stores/libStore';
 	import { onMount } from 'svelte';
 
+	let video =
+		'https://www.dropbox.com/scl/fi/gqawzqxatimvrnqrkp1f1/hero-video.mp4?rlkey=lh554a059aq2rhe8hxv43mbof&st=66vbbvpo&dl=1';
 	let videoElement;
 	let player;
 	let gsap, ScrollTrigger;
