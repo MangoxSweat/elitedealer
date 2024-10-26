@@ -41,6 +41,10 @@
 		font-size: 14pt;
 	}
 
+	.menu li a:hover {
+		color: #e4ae37;
+	}
+
 	.hamburger {
 		display: none;
 		cursor: pointer;

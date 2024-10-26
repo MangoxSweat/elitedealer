@@ -1,4 +1,5 @@
 <script>
+	import ScrollTop from '$lib/components/ScrollTop.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import { onMount } from 'svelte';
 	import About from '$lib/components/About.svelte';
@@ -8,8 +9,6 @@
 	import serviceBanner from '$lib/assets/images/service-banner.png';
 	import aboutBanner from '$lib/assets/images/about-banner.jpeg';
 
-	import Fa from 'svelte-fa';
-	import { faAnglesUp } from '@fortawesome/free-solid-svg-icons/index.js';
 	let items = services.slice(0, 5);
 	let showScrollToTop = false;
 
@@ -42,15 +41,7 @@
 <Services services={items} />
 
 {#if showScrollToTop}
-	<div
-		class="scroll-to-top"
-		on:click={() => {
-			console.log('to top');
-			window.scrollTo({ top: 0, behavior: 'smooth' });
-		}}
-	>
-		<Fa icon={faAnglesUp} size="2x" />
-	</div>
+	<ScrollTop />
 {/if}
 
 <style>
@@ -87,15 +78,5 @@
 		section {
 			padding: 0 3em;
 		}
-	}
-	.scroll-to-top {
-		color: white;
-		position: fixed;
-		bottom: 20px;
-		right: 20px;
-		cursor: pointer;
-		background-color: #e4ae37;
-		border-radius: 50%;
-		padding: 10px;
 	}
 </style>
