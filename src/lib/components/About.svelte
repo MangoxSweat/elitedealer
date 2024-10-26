@@ -4,9 +4,8 @@
 	import { gsapStore, scrollTriggerStore } from '$lib/stores/libStore';
 	import { onMount } from 'svelte';
 	import cover from '$lib/assets/images/coverphoto.png';
+	import video from '$lib/assets/videos/interview-clip-1.mp4';
 
-	let video =
-		'https://www.dropbox.com/scl/fi/zpdnxc3ty1ku2i4i0zlfa/interview-clip-1.mp4?rlkey=v9tuht3i3rhf4gpvkh7xlzjih&st=4mcy5xx4&dl=1';
 	let gsap, ScrollTrigger;
 	let videoElement;
 	let aboutPlayer;
@@ -92,7 +91,7 @@
 
 <style>
 	section {
-		padding: 3em 3em;
+		padding: 3em;
 	}
 
 	.flex-container {
