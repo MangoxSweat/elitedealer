@@ -3,9 +3,9 @@
 	import 'video.js/dist/video-js.css';
 	import { gsapStore, scrollTriggerStore } from '$lib/stores/libStore';
 	import { onMount } from 'svelte';
-	import video from '$lib/assets/video/hero-video.mp4';
 
 	let videoElement;
+	let video = './videos/hero-video.mp4';
 	let player;
 	let gsap, ScrollTrigger;
 
@@ -82,7 +82,7 @@
 <section>
 	<div class="video-container">
 		<video class="video-js vjs-default-skin" bind:this={videoElement}>
-			<source src={video} type="video/mp4" crossorigin="anonymous" />
+			<source src={video} type="video/mp4" />
 			Your browser does not support the video tag.
 		</video>
 	</div>

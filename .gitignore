@@ -5,7 +5,8 @@ node_modules
 .vercel
 /.svelte-kit
 /build
-/src/lib/assets/video
+/static/videos/
+/static/images/
 
 # OS
 .DS_Store

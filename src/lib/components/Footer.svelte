@@ -1,8 +1,8 @@
 <script>
 	import Contact from './Contact.svelte';
-	import logo from '$lib/assets/images/elite_logo.png';
-	import contactBanner from '$lib/assets/images/contact-banner.jpeg';
 	import PageHeader from './PageHeader.svelte';
+
+	let contactBanner = './images/contact-banner.jpeg';
 </script>
 
 <footer>

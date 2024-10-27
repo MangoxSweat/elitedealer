@@ -3,9 +3,9 @@
 	import 'video.js/dist/video-js.css';
 	import { gsapStore, scrollTriggerStore } from '$lib/stores/libStore';
 	import { onMount } from 'svelte';
-	import cover from '$lib/assets/images/coverphoto.png';
-	import video from '$lib/assets/videos/interview-clip-1.mp4';
 
+	let cover = './images/coverphoto.png';
+	let video = './videos/interview-clip-1.mp4';
 	let gsap, ScrollTrigger;
 	let videoElement;
 	let aboutPlayer;
