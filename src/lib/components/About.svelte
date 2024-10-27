@@ -4,7 +4,8 @@
 	import { gsapStore, scrollTriggerStore } from '$lib/stores/libStore';
 	import { onMount } from 'svelte';
 	import cover from '$lib/assets/images/coverphoto.png';
-	import video from '$lib/assets/videos/interview-clip-1.mp4';
+	let video =
+		'https://www.dropbox.com/scl/fi/zpdnxc3ty1ku2i4i0zlfa/interview-clip-1.mp4?rlkey=v9tuht3i3rhf4gpvkh7xlzjih&st=god5xq47&dl=1';
 
 	let gsap, ScrollTrigger;
 	let videoElement;
@@ -79,7 +80,12 @@
 <section class="flex-container">
 	<div id="left">
 		<div class="video-container">
-			<video class="video-js vjs-default-skin" bind:this={videoElement} poster={cover}>
+			<video
+				class="video-js vjs-default-skin"
+				preload="auto"
+				bind:this={videoElement}
+				poster={cover}
+			>
 				Your browser does not support the video tag.
 			</video>
 		</div>
