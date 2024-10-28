@@ -7,7 +7,7 @@
 	import { services } from '$lib/stores/services';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 
-	let serviceBanner = '/service-banner.png';
+	let serviceBanner = '/service-banner.webp';
 	let aboutBanner = '/about-banner.webp';
 
 	let items = services.slice(0, 5);
