@@ -4,7 +4,7 @@
 	import { gsapStore, scrollTriggerStore } from '$lib/stores/libStore';
 	import { onMount } from 'svelte';
 
-	let cover = '/coverphoto.png';
+	let cover = '/coverphoto.webp';
 	let video = '/about.mp4';
 	let gsap, ScrollTrigger;
 	let videoElement;
