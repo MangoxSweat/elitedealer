@@ -1,8 +1,8 @@
 <script>
-	import Contact from './Contact.svelte';
-	import PageHeader from './PageHeader.svelte';
+	import Contact from '$lib/components/Contact.svelte';
+	import PageHeader from '$lib/components/PageHeader.svelte';
 
-	let contactBanner = './images/contact-banner.jpeg';
+	let contactBanner = '/contact-banner.jpeg';
 </script>
 
 <footer>
