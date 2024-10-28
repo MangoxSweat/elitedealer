@@ -7,8 +7,8 @@
 	import { services } from '$lib/stores/services';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 
-	let serviceBanner = './images/service-banner.png';
-	let aboutBanner = './images/about-banner.jpeg';
+	let serviceBanner = '/service-banner.png';
+	let aboutBanner = '/about-banner.jpeg';
 
 	let items = services.slice(0, 5);
 	let showScrollToTop = false;

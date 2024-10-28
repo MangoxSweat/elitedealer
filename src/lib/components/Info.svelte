@@ -1,9 +1,9 @@
 <script>
 	import Fa from 'svelte-fa';
 	import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons/index.js';
-	import SocialMediaIcons from './SocialMediaIcons.svelte';
+	import SocialMediaIcons from '$lib/components/SocialMediaIcons.svelte';
 
-	let banner = './images/info-banner.jpeg';
+	let banner = '/info-banner.jpeg';
 
 	let infos = {
 		phone: '(908)-966-3105',
