@@ -3,7 +3,7 @@
 	import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons/index.js';
 	import SocialMediaIcons from '$lib/components/SocialMediaIcons.svelte';
 
-	let banner = '/info-banner.jpeg';
+	let banner = '/info-banner.webp';
 
 	let infos = {
 		phone: '(908)-966-3105',
