@@ -5,7 +5,13 @@
 
 <header>
 	<div id="logo">
-		<a href="/"> <img {src} alt="Elite Dealer US Logo" /></a>
+		<a href="/">
+			<picture>
+				<source srcset="/logo-small.png" media="(max-width: 600px)" />
+				<source srcset="/logo-large.png" media="(min-width: 601px)" />
+				<img {src} alt="Elite Dealer US Logo" />
+			</picture>
+		</a>
 	</div>
 	<Nav />
 </header>
