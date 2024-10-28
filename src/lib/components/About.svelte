@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 
 	let cover = '/coverphoto.png';
-	let video = '/interview-clip-1.mp4';
+	let video = '/about.mp4';
 	let gsap, ScrollTrigger;
 	let videoElement;
 	let aboutPlayer;

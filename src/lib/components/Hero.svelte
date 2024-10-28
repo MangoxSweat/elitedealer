@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 
 	let videoElement;
-	let video = './videos/hero-video.mp4';
+	let video = '/hero.mp4';
 	let player;
 	let gsap, ScrollTrigger;
 
