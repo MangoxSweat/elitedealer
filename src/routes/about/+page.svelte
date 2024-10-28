@@ -2,7 +2,7 @@
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import About from '$lib/components/About.svelte';
 	import LogoSlider from '$lib/components/LogoSlider.svelte';
-	let banner = '/about-banner.jpeg';
+	let banner = '/about-banner.webp';
 </script>
 
 <PageHeader title={'About'} background={banner} />

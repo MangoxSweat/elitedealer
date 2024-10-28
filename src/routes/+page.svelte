@@ -8,7 +8,7 @@
 	import PageHeader from '$lib/components/PageHeader.svelte';
 
 	let serviceBanner = '/service-banner.png';
-	let aboutBanner = '/about-banner.jpeg';
+	let aboutBanner = '/about-banner.webp';
 
 	let items = services.slice(0, 5);
 	let showScrollToTop = false;
