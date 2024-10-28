@@ -6,7 +6,6 @@
 	import { Cloudinary } from 'cloudinary-core';
 
 	let cover = '/coverphoto.webp';
-	let video = '/about.mp4';
 	let gsap, ScrollTrigger;
 	let videoElement;
 	let aboutPlayer;
