@@ -1,6 +1,6 @@
 <script>
-	import Nav from './Nav.svelte';
-	let src = './images/elite_logo.png';
+	import Nav from '$lib/components/Nav.svelte';
+	let src = 'elite_logo.png';
 </script>
 
 <header>
