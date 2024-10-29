@@ -3,15 +3,11 @@
 	import 'video.js/dist/video-js.css';
 	import { gsapStore, scrollTriggerStore } from '$lib/stores/libStore';
 	import { onMount } from 'svelte';
-   import { Cloudinary } from '@cloudinary/url-gen';
+	import { Cloudinary } from '@cloudinary/url-gen';
 
-   const cld = new Cloudinary({ cloud: { cloudName: 'dv2smeko4' } });
-   const videoUrl = cld.video('about_a7menb').toURL();
+	const cld = new Cloudinary({ cloud: { cloudName: 'dv2smeko4' } });
+	const videoUrl = cld.video('about_a7menb').toURL();
 
-<video controls width="100%">
-   <source src={videoUrl} type="video/mp4">
-   Your browser does not support the video tag.
-</video>
 	let cover = '/coverphoto.webp';
 	let gsap, ScrollTrigger;
 	let videoElement;
