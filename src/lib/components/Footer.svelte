@@ -21,14 +21,8 @@
 		background-size: cover;
 		background-position-y: 90%;
 	}
-	footer {
-	}
-	h1,
 	h2,
 	h3,
-	h4,
-	h5,
-	h6,
 	p {
 		text-align: center;
 		color: white;

@@ -5,13 +5,12 @@
 	import { onMount } from 'svelte';
 	import { Cloudinary } from '@cloudinary/url-gen';
 
+	let gsap, ScrollTrigger;
+	let aboutPlayer;
+	let videoElement;
 	const cld = new Cloudinary({ cloud: { cloudName: 'dv2smeko4' } });
 	const video = cld.video('about_a7menb').toURL();
-
 	let cover = '/coverphoto.webp';
-	let gsap, ScrollTrigger;
-	let videoElement;
-	let aboutPlayer;
 
 	gsapStore.subscribe((lib) => {
 		gsap = lib;

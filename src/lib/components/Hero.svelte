@@ -53,12 +53,72 @@
 
 	function handleTimeUpdate() {
 		const currentTime = videoElement.currentTime;
-		if (currentTime >= 10 && currentTime < 11) {
-			//console.log('Video reached 10 seconds');
-			// Add your custom logic here
+
+		if (currentTime >= 5 && currentTime < 7) {
+			console.log('Video reached 10 seconds');
+			gsap.to('#overlay-text h1:nth-child(1)', {
+				opacity: 1,
+				duration: 1,
+				onComplete: () => {
+					gsap.to('#overlay-text h1:nth-child(1)', { opacity: 0, duration: 1, delay: 3 });
+				}
+			});
 		}
 
-		//h1 animations based on the timeline
+		if (currentTime >= 15 && currentTime < 16) {
+			console.log('Video reached 20 seconds');
+			gsap.to('#overlay-text h1:nth-child(2)', {
+				opacity: 1,
+				duration: 1,
+				onComplete: () => {
+					gsap.to('#overlay-text h1:nth-child(2)', { opacity: 0, duration: 1, delay: 3 });
+				}
+			});
+		}
+
+		if (currentTime >= 41 && currentTime < 42) {
+			console.log('Video reached 30 seconds');
+			gsap.to('#overlay-text h1:nth-child(3)', {
+				opacity: 1,
+				duration: 1,
+				onComplete: () => {
+					gsap.to('#overlay-text h1:nth-child(3)', { opacity: 0, duration: 1, delay: 3 });
+				}
+			});
+		}
+
+		if (currentTime >= 30 && currentTime < 31) {
+			console.log('Video reached 40 seconds');
+			gsap.to('#overlay-text h1:nth-child(4)', {
+				opacity: 1,
+				duration: 1,
+				onComplete: () => {
+					gsap.to('#overlay-text h1:nth-child(4)', { opacity: 0, duration: 1, delay: 3 });
+				}
+			});
+		}
+
+		if (currentTime >= 48 && currentTime < 49) {
+			console.log('Video reached 50 seconds');
+			gsap.to('#overlay-text h1:nth-child(5)', {
+				opacity: 1,
+				duration: 1,
+				onComplete: () => {
+					gsap.to('#overlay-text h1:nth-child(5)', { opacity: 0, duration: 1, delay: 3 });
+				}
+			});
+		}
+
+		if (currentTime >= 56 && currentTime < 57) {
+			console.log('Video reached 60 seconds');
+			gsap.to('#overlay-text h1:nth-child(6)', {
+				opacity: 1,
+				duration: 1,
+				onComplete: () => {
+					gsap.to('#overlay-text h1:nth-child(6)', { opacity: 0, duration: 1, delay: 3 });
+				}
+			});
+		}
 	}
 
 	onMount(() => {
@@ -92,15 +152,72 @@
 	</div>
 </section>
 
-<!--
-<h1>Streamlining Your Dealership Operations</h1>
-<h1>Professional Car Prep & Valet</h1>
-<h1>Customized Staffing Solutions</h1>
-<h1>Efficient Lot & Logistics Management</h1>
-<h1>Over a Million Cars Prepped for Sale</h1>
--->
+<div id="overlay-text">
+	<h1>Solving Dealership Logistics <br /> Problems For <span>22 Years</span></h1>
+	<h1><span>Professional</span><br /> Car Prep & Valet</h1>
+	<h1>Streamalining Your Dealership Operations</h1>
+	<h1>Efficient Lot & Logistics Management</h1>
+	<h1>Customized Staffing Solutions</h1>
+	<h1>Over a Million Cars Prepped for Sale</h1>
+</div>
 
 <style>
+	#overlay-text {
+		z-index: 100;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		text-align: center;
+		pointer-events: none; /* Ensures the overlay doesn't interfere with video controls */
+	}
+
+	#overlay-text h1 {
+		opacity: 0;
+		font-size: 36pt;
+		position: absolute;
+	}
+
+	#overlay-text h1:nth-child(1) {
+		top: 30%;
+		left: 3%;
+		text-align: right;
+	}
+
+	#overlay-text h1:nth-child(2) {
+		bottom: 10%;
+		right: 25%;
+	}
+
+	#overlay-text h1:nth-child(3) {
+		top: 40%;
+	}
+
+	#overlay-text h1:nth-child(4) {
+		top: 55%;
+	}
+
+	#overlay-text h1:nth-child(5) {
+		top: 70%;
+	}
+
+	#overlay-text h1:nth-child(6) {
+		top: 75%;
+	}
+
+	/* Container for the video */
+	.video-container {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative; /* Ensure the video container is the reference for the absolute positioning */
+	}
 	/* Container for the video */
 	.video-container {
 		width: 100%;
@@ -113,5 +230,8 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
+	}
+	span {
+		color: #e4ae37;
 	}
 </style>
