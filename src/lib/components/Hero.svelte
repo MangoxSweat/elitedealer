@@ -3,15 +3,12 @@
 	import 'video.js/dist/video-js.css';
 	import { gsapStore, scrollTriggerStore } from '$lib/stores/libStore';
 	import { onMount } from 'svelte';
-	import { Cloudinary } from 'cloudinary-core';
+	import { Cloudinary } from '@cloudinary/url-gen';
 
-	// Initialize Cloudinary instance
-	const cld = new Cloudinary({ cloud_name: 'dv2smeko4' });
+	const cld = new Cloudinary({ cloud: { cloudName: 'dv2smeko4' } });
+	const video = cld.video('hero_r7o5bj').toURL(); // Initialize Cloudinary instance
 
 	// Generate video URL
-	const video = cld.video_url('hero_r7o5bj', {
-		format: 'mp4'
-	});
 	let videoElement;
 	let player;
 	let gsap, ScrollTrigger;
