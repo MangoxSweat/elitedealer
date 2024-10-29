@@ -2,7 +2,7 @@
 	import Contact from '$lib/components/Contact.svelte';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 
-	let contactBanner = '/contact-banner.jpeg';
+	let contactBanner = '/contact-banner.webp';
 </script>
 
 <footer>
