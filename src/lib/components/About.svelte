@@ -6,7 +6,7 @@
 	import { Cloudinary } from '@cloudinary/url-gen';
 
 	const cld = new Cloudinary({ cloud: { cloudName: 'dv2smeko4' } });
-	const videoUrl = cld.video('about_a7menb').toURL();
+	const video = cld.video('about_a7menb').toURL();
 
 	let cover = '/coverphoto.webp';
 	let gsap, ScrollTrigger;
